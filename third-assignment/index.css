@@ -1,0 +1,434 @@
+/* 
+  CSS Reset
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CSS reset */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Main CSS */
+:root {
+  --black: hsl(211, 35%, 17%);
+  --divider-color: hsl(204, 19%, 90%);
+  --gray-hover: hsl(213, 10%, 44%);
+  --section-divider-color: hsl(216, 33%, 97%);
+  --blue-color: hsl(211, 49%, 55%);
+  --flex-2-blue: hsl(204, 84%, 41%);
+  --input-color: hsl(216, 16%, 94%);
+  --green-button: hsl(173, 96%, 28%);
+  --gray-text: hsl(213, 10%, 44%);
+  --light-blue: hsl(189, 100%, 86%);
+  --background-color: hsl(204, 33%, 97%);
+  --gray-3: hsl(200, 6%, 41%);
+  --blue-footer: hsl(200, 49%, 38%);
+  /* --background: hsl(204, 33%, 97%); */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  /* background-color: var(--background-color); */
+}
+
+.logo-container img {
+  width: 200px;
+  min-width: 100px;
+}
+
+nav.nav-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-inline: 40px;
+  margin-block-start: 30px;
+}
+
+div.nav ul {
+  list-style: none;
+  display: flex;
+  width: 34vw;
+  justify-content: space-between;
+  /* padding: 0; */
+  /* gap: 42px; */
+  /* width:30px; */
+}
+
+div.nav ul>li>a {
+  text-decoration: unset;
+  color: var(--black);
+  font-weight: 700;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 6px;
+  transition: border 0.1s ease;
+}
+
+div.nav ul>li>a:hover {
+  border: 2px solid var(--gray-hover);
+}
+
+div.divider {
+  height: 2px;
+  background-color: var(--divider-color);
+  margin-block-start: 30px;
+  margin-inline: 40px;
+}
+
+main.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 286px;
+}
+
+/* main flex cotainer */
+div.flex-container {
+  display: flex;
+  margin-block-start: 85px;
+  margin-block-end: 33px;
+  box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.05), 0px 15px 35px 0px hsla(204, 29%, 24%, 0.1);
+}
+
+div.title-section h2 {
+  color: var(--black);
+  font-weight: 400;
+  font-size: 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-block-start: 41px;
+  margin-block-end: 24px;
+
+}
+
+div.title-section,
+div.basic-info,
+div.payment-info,
+div.button,
+div.help,
+div.stripe {
+  margin-inline: 49px;
+}
+
+div.divide {
+  height: 2px;
+  background-color: var(--section-divider-color);
+  margin-block-end: 36px;
+}
+
+div.flex-items {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-block-end: 9px;
+}
+
+div.number-style h2 {
+  font-size: 16px;
+  color: var(--blue-color);
+  border: 2px solid var(--blue-color);
+  display: inline-block;
+  padding: 0px 8px;
+  border-radius: 50%;
+}
+
+div.h2-style h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.16px;
+  font-style: normal;
+}
+
+div.flex-input {
+  display: flex;
+  gap: 30px;
+}
+
+input {
+  display: block;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--input-color);
+  height: 36px;
+  padding-inline-start: 13px;
+  padding-block: 9px;
+  font-size: 14px;
+  color: var(--gray-hover);
+}
+
+.card-input {
+  width: 100%;
+}
+
+/* Trace why label is not applying margin bottom */
+/* label {
+  margin-block-end: 7px;
+} */
+
+/* div.longer-input {
+  width: 100%;
+} */
+
+
+.flex-input-2,
+.flex-input-1 {
+  flex: 1;
+}
+
+.longer-input-field {
+  width: 70%;
+}
+
+.flexed-input {
+  width: 100%;
+}
+
+div.basic-info,
+div.payment-info {
+  margin-block-end: 41px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding-block: 13px;
+  border-radius: 5px;
+  background-color: var(--green-button);
+}
+
+div.button {
+  margin-block-start: 39px;
+  margin-block-end: 24px;
+}
+
+div.help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+div.support span.bold {
+  font-weight: 700;
+}
+
+div.support span.gray {
+  color: var(--gray-text);
+}
+
+div.help-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+div.stripe .stripe-logo {
+  width: 92px;
+  margin: 20px auto 46.9px;
+}
+
+div.flex-1-container {
+  flex: 2;
+}
+
+div.flex-2-container {
+  flex: 1;
+  background-color: var(--flex-2-blue);
+  color: #fff;
+}
+
+div.wrapper {
+  margin-block-start: 42px;
+}
+
+/* Second Container */
+div.price {
+  display: flex;
+  align-items: center;
+  margin-block-start: 18px;
+  letter-spacing: 0.015px;
+}
+
+.dollar {
+  font-size: 24px;
+  font-weight: 700;
+  align-self: flex-start;
+  margin-block-start: 18px;
+}
+
+.ninety-nine {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.per-year {
+  font-size: 24px;
+  font-weight: 700;
+  align-self: flex-end;
+  margin-block-end: 15px;
+}
+
+div.renewal {
+  font-style: italic;
+  line-height: 24px;
+  margin-block-end: 36px;
+}
+
+div .checker-img {
+  width: 20px;
+}
+
+div.features-flex-items {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-block-end: 38px;
+}
+
+div.client-sites-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-block-end: 41px;
+}
+
+div.client-sites-container .bold,
+.five,
+blockquote .bold {
+  font-weight: 700;
+}
+
+div>div.bottom-border {
+  height: 4px;
+  background-color: var(--light-blue);
+  width: 77%;
+  margin-block-start: -5.7px;
+  opacity: 0.5036px;
+}
+
+div.divider-rule {
+  height: 2px;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%, 0.2005);
+  margin-block-end: 41px;
+}
+
+.quote-container blockquote {
+  font-style: italic;
+  margin-block-end: 17px;
+}
+
+.kirk-img-container {
+  width: 40px;
+}
+
+div.kirk-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  /* margin-block-end: 70px; */
+}
+
+div.kirk-beard p {
+  font-weight: 700;
+}
+
+div.wrapper {
+  padding-inline: 46px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer span.copyright {
+  color: var(--gray-3);
+}
+
+.footer span.terms {
+  color: var(--blue-footer);
+}
+
+footer.footer {
+  margin-block-end: 139px;
+}
+
+div.input-card {
+  display: flex;
+  border-radius: 6px;
+}
+
+div.input-card input {
+  border-radius: unset;
+}
+
+div.input-card input:focus,
+input:focus {
+  outline: unset;
+}
+
+.card-input {
+  width: 70%;
+}
+
+.month,
+.cvc {
+  width: 15%;
+}
+
+div div.input-card .cvc {
+  border-radius: 0 6px 6px 0;
+}
+
+div div.input-card .card-input {
+  border-radius: 6px 0 0 6px;
+}
